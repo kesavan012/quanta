@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				quantum: {
+					red: '#FF0030',
+					black: '#000000',
+					white: '#FFFFFF',
+					lightgray: '#F5F5F5',
+					darkgray: '#222222',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +92,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'particles-explode': {
+					'0%': {
+						transform: 'translate(-50%, -50%) scale(0)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translate(-50%, -50%) scale(1)',
+						opacity: '0'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'flip': {
+					'0%': {
+						transform: 'rotateY(0)'
+					},
+					'100%': {
+						transform: 'rotateY(180deg)'
+					}
+				},
+				'flip-back': {
+					'0%': {
+						transform: 'rotateY(180deg)'
+					},
+					'100%': {
+						transform: 'rotateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'particles-explode': 'particles-explode 2s ease-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'flip': 'flip 0.5s ease-out forwards',
+				'flip-back': 'flip-back 0.5s ease-out forwards'
 			}
 		}
 	},
