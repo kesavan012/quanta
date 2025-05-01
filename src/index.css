@@ -97,6 +97,20 @@
   .rotate-y-180 {
     transform: rotateY(180deg);
   }
+
+  /* Animations for testimonials */
+  .animate-bounce-once {
+    animation: bounce 0.5s ease-in-out;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Particle Animation */
@@ -106,3 +120,4 @@
   border-radius: 50%;
   pointer-events: none;
 }
+

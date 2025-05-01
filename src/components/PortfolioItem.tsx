@@ -15,7 +15,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ image, title, category, l
   return (
     <Link 
       to={link} 
-      className="block relative overflow-hidden group rounded-lg"
+      className="block relative overflow-hidden group rounded-lg h-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -33,7 +33,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ image, title, category, l
       >
         <span className="text-quantum-red text-sm uppercase tracking-wider mb-2">{category}</span>
         <h3 className="text-white text-xl md:text-2xl font-bold text-center">{title}</h3>
-        <div className={`mt-4 w-12 h-px bg-quantum-red transition-all duration-500 ${isHovered ? 'w-24' : 'w-12'}`}></div>
+        <div className={`mt-4 h-px bg-quantum-red transition-all duration-500 ${isHovered ? 'w-24' : 'w-12'}`}></div>
       </div>
     </Link>
   );

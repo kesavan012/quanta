@@ -159,13 +159,14 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allServices.map((service, index) => (
-              <FlipCard
-                key={index}
-                title={service.title}
-                icon={service.icon}
-                description={service.fullDesc}
-                linkTo={service.linkTo}
-              />
+              <div key={index}>
+                <FlipCard
+                  title={service.title}
+                  icon={service.icon}
+                  description={service.fullDesc}
+                  linkTo={`/services/${service.id}`}
+                />
+              </div>
             ))}
           </div>
         </div>
